@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Kdam+Thmor+Pro&family=Lato:ital,wght@0,400;0,700;1,300;1,400;1,700&family=Mochiy+Pop+P+One&family=Open+Sans:wght@300;400;600;700&family=Oswald&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;700&family=Roboto:wght@300;400&family=Sedgwick+Ave&display=swap');
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* background-image: url(/img/jason-blackeye-GPPAjJicemU-unsplash.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image .3s ease-in-out;
+    
+}
+
+.section_Uno{
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.grados{
+    background: rgba(0, 0, 0, 0);
+    /* width: 40%; */
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grados .temperatura{
+    color: white;
+    font-size: 10em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: -1px -1px 5px #000;
+    order: 1;
+}
+
+.temperatura__minima-maxima{
+    height: 30px;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.575); */
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.temperaturaMinima,.temperaturaMaxima{
+    min-width: 40%;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 3px;  
+    box-shadow: -8px 8px 15px rgba(0, 0, 0, .5); 
+    padding: 5px 5px; 
+}
+
+.temperaturaMaxima{
+    background-color: rgb(255, 0, 0, .5);
+}
+.temperaturaMaxima:hover{
+    background-color: rgba(255, 0, 0, 0.85);
+    cursor: pointer;
+}
+
+.temperaturaMinima{
+    background-color: rgba(2, 218, 153, 0.5);
+}
+.temperaturaMinima:hover{
+    background-color: rgba(2, 218, 153, 0.863);
+    cursor: pointer;
+}
+
+.section_Dos{
+    width: 40%;
+    height: 100vh;
+    background-color: #00000082;
+    box-shadow: -1px 0px 15px rgba(0, 0, 0, 0.591);
+    backdrop-filter: blur(3px);
+}
+
+.location{
+    min-width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1rem;
+    /* font-family: 'Kdam Thmor Pro', sans-serif; */
+    font-family: monospace;
+    /* font-weight: bold; */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* text-shadow: -1px -1px 5px #e3d0d095; */
+    background-color: rgba(0, 0, 0, 0.545);
+    cursor: pointer;
+}
+
+.section_Dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.section_Dos p{
+    /* background: rgba(0, 0, 0, 0.457); */
+    height: 3rem;
+    color: #fff;
+    font-size: 2rem;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+.section_Dos .hover:hover{
+    /* z-index: 10; */
+    font-size: 2.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.container_dia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(24, 24, 24);
+    min-height: 100px;
+    /* position: relative; */
+}
+
+
+
+/*LOADER*/
+
+.lds-ring {
+    display: inline-block;
+    position: relative;      
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.loader{
+    background: rgba(0, 0, 0, 0.994);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    clip-path: circle(150% at 100% 0);
+    transition: clip-path .7s 3s ease-in-out;
+}
+
+.loader2{
+    clip-path: circle(0% at 100% 100%);
+
+}
+
+.reloj{
+    color: #fff;
+    background: #000;
+    font-family: monospace;
+    /* padding: 5px; */
+    font-size: 1rem;
+    min-width: 200px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

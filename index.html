@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="lds-ring loader" id="loader"><div></div><div></div><div></div><div></div></div>
+    
+    <div class="container" id="container">
+        <section class="location" id="location"></section>
+        <section class="section_Uno">
+            
+            <article class="reloj" id="reloj">17:05:45</article>
+            
+            <article class="grados" id="grados">
+                <div class="temperatura__minima-maxima">
+                    <p id="temperaturaMinima" class="temperaturaMinima"></p>
+                    <p id="temperaturaMaxima" class="temperaturaMaxima"></p>
+                </div>
+            </article>
+        </section>
+        <section class="section_Dos">
+            <div class="container_dia"><p class="dia-estado" id="dia"></p><div class="container-icon"><img src="/img/weather_images/animated/day.svg" id="icono"></div></div>
+            <p class="humedad hover" id="humedad"></p>
+            <p class="presionAtmosferica hover" id="presionAtmosferica"></p>
+            <p class="velocidadViento hover" id="velocidadViento"></p>
+            
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
